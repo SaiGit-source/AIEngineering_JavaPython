@@ -1,0 +1,27 @@
+AI Engineering Intro
+
+AI Engineering requires AI models. Making a model is a very difficult task. OpenAI has spent huge amount of money to train the models. Every 2 months, they are releasing new models. 
+
+When we have so many companies like OpenAI to create and sell models. it is not sensible to create our own models.
+
+Mobile development started very late in 2010 because the OS ecosystem changed and it was development-friendly (developer-ecosystem).
+
+Same thing with OpenAI, Google, they have these models already created. How do we use these models? download the model and run it on local machine. GPT4 has 1.8 trillion parameters. 
+
+Go to ollama and look for some models. some models are 404GBs, we cannot run these models on local machine
+
+Google or OpenAI run these models on their servers and thats called as Model As A Service (MaaS)
+
+
+OpenAI --> API Platform --> pay OpenAI to run their models. How much we got to pay? it depends on tokens
+
+Checkout aliencoach.com --> we can start a Java interview lets say. all these we could do with existing AI models
+
+We will do AI Engineering in both Java Spring and Python FastAPI. certain things can be done in Python but not Java and vice-versa
+
+
+
+
+
+
+
