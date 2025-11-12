@@ -1,0 +1,39 @@
+What is AI Engineering?
+The process of building Apps on top of readily available models. Each time we talk to AI models through ChatGPT etc, it does lots of processing on the servers. To do processing, they have to do a lot of computations, they are keeping the servers cool and they are spending a lot of resources. 
+Basically if we are not using AI for soemthing useful then we are actually wasting so much of resources (utilities, heat, ).
+Another drawback is that we are using AI for simple emails etc. We are so much getting used to AI
+
+Gmail spam filter is AI, Netflix recommendation is AI. It's been there for a long time
+
+What's AI? Adding intelligence to a computer is AI. Computer makes decision for you and it's AI. 
+One of the ways is Symbolic AI (that means we write everything, for this instance do this, rule-based)
+
+What's ML? 
+What if you want AI to learn by itself. Machine learning: basically you give a model some data and based on that data it understands the rules. 
+
+We want to achieve AI so the Goal is AI, methods to achieve AI are Symbolic AI, ML etc and Technique is Deep learning
+
+What's DL?
+Deep learning: one of the ways to achieve ML is DL. DL is implemented with the help of Neural network. 
+NN is there in the brain also, it mimics the human brain.
+Neuron takes an input --> maybe menu card --> when you have only one neuron, it cant work on a complex problem. so in the brain also we have multiple neurons
+Input layer will take some inputs. you are passing a pic of a cat into the model and asking the model to guess which animal is that.
+
+if i pass in a cat and if it predicts a baby tiger, then algorithm is useless thats why we need Backpropation
+
+Lets say one neuron predicted 'cat' and second one said 'tiger'. why did i listen to tiger? because he has a bigger weight. so can i change the weights?
+
+When it is a 'cat' if we get a 'tiger' then we have a loss function. to minimize the loss function, we use Backpropagation
+
+you go back from the output in the reverse order to tune the weights. you do Backpropagation multiple times with huge amount of data to get proper output
+
+for adding each neuron, we are exponentially increasing the weights and biases. when you combine weights and biases then they are called as Parameters
+
+44:34
+
+
+
+
+
+
+
