@@ -10,6 +10,8 @@
 // Go to Ollama and download models
 // Use Gemma3 or deepseek-r1
 // open Powershell and type ollama run deepseek-r1:1.5b
+// for OpenAI, you got to pay like $5
+
 
 
 
