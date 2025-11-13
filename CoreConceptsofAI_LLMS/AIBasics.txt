@@ -1,7 +1,7 @@
 What is AI Engineering?
 The process of building Apps on top of readily available models. Each time we talk to AI models through ChatGPT etc, it does lots of processing on the servers. To do processing, they have to do a lot of computations, they are keeping the servers cool and they are spending a lot of resources. 
 Basically if we are not using AI for soemthing useful then we are actually wasting so much of resources (utilities, heat, ).
-Another drawback is that we are using AI for simple emails etc. We are so much getting used to AI
+Another drawback is that we are using AI for simple emails etc. We are so much getting used to AI, thats not good
 
 Gmail spam filter is AI, Netflix recommendation is AI. It's been there for a long time
 
@@ -19,17 +19,82 @@ NN is there in the brain also, it mimics the human brain.
 Neuron takes an input --> maybe menu card --> when you have only one neuron, it cant work on a complex problem. so in the brain also we have multiple neurons
 Input layer will take some inputs. you are passing a pic of a cat into the model and asking the model to guess which animal is that.
 
-if i pass in a cat and if it predicts a baby tiger, then algorithm is useless thats why we need Backpropation
+if i pass in a cat and if it predicts a baby tiger, then algorithm is useless thats why we need Backpropagation
 
-Lets say one neuron predicted 'cat' and second one said 'tiger'. why did i listen to tiger? because he has a bigger weight. so can i change the weights?
+Lets say one neuron predicted 'cat' and second one said 'tiger'. why did i listen to tiger? because 'tiger' neuron has a bigger weight. so can i change the weights?
 
-When it is a 'cat' if we get a 'tiger' then we have a loss function. to minimize the loss function, we use Backpropagation
+When it is a 'cat' if we get a 'tiger' in the output then we have a loss function. to minimize the loss function, we use Backpropagation
 
 you go back from the output in the reverse order to tune the weights. you do Backpropagation multiple times with huge amount of data to get proper output
 
-for adding each neuron, we are exponentially increasing the weights and biases. when you combine weights and biases then they are called as Parameters
+for adding each neuron, we are exponentially increasing the weights and biases. when you combine weights and biases then they are called as Parameters. Bigger the model, that means it has got more parameters. the more parameters, you tune model better, the more you teach it. 
 
-44:34
+Parameters --> Weights + Biases
+
+Before calling them as LLMs, we are calling as Language Models
+
+Transformers: type of Neural Networks. whats different in Transformers is it has got something called as Self-Attention
+
+In 2018, GPT1 was launched --> No of parameters: 117 million parameters
+GPT2 --> 2019 with 1.5 Billion parameters
+GPT3 --> 2020 --> 175 Billion parameters
+GPT4 --> 1.8T
+GPT5 --> 2.5T
+
+Emergent behaviors
+
+Transformers is a very important concept --> if you look into ChatGPT the letter 'T' is Transformers
+
+GPT --> Generative Pretrained Transformers
+
+it's like reading a book, you read a book then 
+"The dog chased the ball because it was fast" when AI reads the line, it gets confused. Other algorithms were facing difficulty with this. But Transformers overcame this problem with self-Attention.
+
+When a phrase is confusing or ambiguous (e.g., "The cat didn't chase the mouse, because it was not hungry" - is "it" the cat or the mouse?), the Transformer model resolves this obstacle by leveraging its self-attention mechanism and broad contextual understanding. 
+
+Two kinds of Language models: Masked LM and Autoregressive LM
+
+My Favorite ____ is Blue --> Masked LM
+My Favorite color is _________ this is Autoregressive because we are asking to generate a text at the end. here you can also generate the next word or more text
+
+When you work with Generative AI, you are basically working with Autoregressive LM
+
+Masked LM can do sentiment analysis . When you want to generate something, it comes under Autoregressive
+
+How exactly it generates?
+
+When you work with LLM, you pass the text
+
+AI Engineering is the process of building Apps on top of readily available models --> we can treat each word as one token
+
+Different LLMs have different way of breaking down sentences into tokens. the depth of how they break words into tokens thats machine learning, which is out of the scope of this course
+
+Lets say LLM breaks down 'Cooking' into 'Cook' and 'ing'. LLM remembers only one word 'Cook'. same thing for the word 'Cooked' , it will remember only 'Cook' no 'Cooking' or 'Cooked'
+
+So for LLMs, vocabulary size goes down, when vocabulary size goes down, model size goes down along with it
+
+There is something called as 'Googling', which is not a real word. so we are making up more words. LLM will not remember 'ChatGPTing' it will remember one token 'ChatGPT'
+
+Average size of one word or token is 3/4 of word.
+
+First it breaks-down sentence into words then words are broken-down into tokens. From tokens it will create numbers and these numbers are called as vectors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
