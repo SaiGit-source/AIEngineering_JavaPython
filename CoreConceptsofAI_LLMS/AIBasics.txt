@@ -79,6 +79,11 @@ Average size of one word or token is 3/4 of word.
 
 First it breaks-down sentence into words then words are broken-down into tokens. From tokens it will create numbers and these numbers are called as vectors
 
+Python has an edge when it comes to ML / AI
+
+
+
+
 
 
 

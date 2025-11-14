@@ -11,6 +11,33 @@
 // Use Gemma3 or deepseek-r1
 // open Powershell and type ollama run deepseek-r1:1.5b
 // for OpenAI, you got to pay like $5
+// look for openAI library: https://platform.openai.com/docs/libraries
+
+// select Java
+//  ResponseCreateParams params = ResponseCreateParams.builder()
+// whatever you do on ChatGPT you can do it programmatically
+
+
+// we are not going to use this code. we are going to IntelliJ
+
+import com.openai.client.OpenAIClient;
+import com.openai.client.okhttp.OpenAIOkHttpClient;
+import com.openai.models.responses.Response;
+import com.openai.models.responses.ResponseCreateParams;
+
+public class Main {
+    public static void main(String[] args) {
+        OpenAIClient client = OpenAIOkHttpClient.fromEnv();
+
+        ResponseCreateParams params = ResponseCreateParams.builder()
+                .input("Say this is a test")
+                .model("gpt-5-nano")
+                .build();
+
+        Response response = client.responses().create(params);
+        System.out.println(response.outputText());
+    }
+}
 
 
 

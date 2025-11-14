@@ -1,0 +1,8 @@
+Java Setup notes
+
+Add this dependency from OpenAI site (https://platform.openai.com/docs/libraries?language=java) into the POM file in IntelliJ
+<dependency>
+  <groupId>com.openai</groupId>
+  <artifactId>openai-java</artifactId>
+  <version>4.0.0</version>
+</dependency>
