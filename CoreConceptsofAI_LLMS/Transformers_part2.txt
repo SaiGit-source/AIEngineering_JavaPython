@@ -1,0 +1,19 @@
+Transformers are a type of Neural Network
+
+Transformers process entire sequences in parallel using attention
+
+"The dog chased the ball because it was fast"
+Here it refers to the ball or dog?
+
+Based on the words it has, it tries to find the context behind it. 
+thats where self-attention works. Transformers retain the information that happened before
+
+
+Input --> Input embedding --> Positional embedding (rearranging the sequence of words) --> when you want to translate, it is not about doing it fast but also rearranging the words 
+
+when you go to chatGPT, it creates a text for you that's generative AI because it is generating something for you
+
+thats where we have Encoding and Decoding of models
+
+38:30
+
