@@ -1,0 +1,83 @@
+Embedding And Vector
+As humans, we speak and understand different languages but machine can understand only one languages
+Computer works with only numbers
+
+In the world of general computers, of course we have binary format. we store data in Database
+
+In SQL, we fetch the data based on query
+database --> Query --> Key --> Value
+
+what if you want to search not by exact value but something similar. In AI, we dont have to specify the exact word 
+
+How exactly AI is going to fetch the value without the exact key?
+
+AI --> Query --> Key --> Value  in database scenario, key needs to be exact, in AI scenario, Key can be surrouding thing
+
+instead of Cheetah, i can say the 'fastest animal' example --> for AI
+
+how exactly it is happening in AI? this is where you got to find the similarity search or semantic search
+
+There is a flow to achieve this
+
+Input --> "My name is Abc" or "Suggest a phone below $500"
+
+how to store this in binary format? first we got to find tokens for this.
+
+Phone --> "Suggest a phone below $500"
+Token --> "Suggest a phone below $500"
+
+we got to convert tokens/words into vectors (numbers)
+
+it will give a number to a word like 5, 18, 32 etc these are all vectors
+
+Get the word --> convert word into number (the conversion process is called Embedding)
+
+After you do Embedding, what you get is a Vector
+
+Say you have a graph with x-y axis --> we need two values to plot it (5,3), (4,6) etc
+
+
+Input Words --> Token --> Embedding --> Vector --> Plot in x-y graph
+
+What will happen if you plot this? 
+
+You can go to https://www.geogebra.org/calculator and get the Embeddings for different words: 'Lion'(-0.973, 0.229), 'Cat'(-0.9921, -0.1246)
+
+Why it is plotting the way it is plotting? based on similarity of words.
+similar words will have similar co-ordinates/embeddings so they are closer
+
+https://platform.openai.com/docs/guides/embeddings/embedding-models
+
+By default, the length of the embedding vector is 1536 for text-embedding-3-small or 3072 for text-embedding-3-large
+
+For small, we have 1536 dimensions, for large, we have 3072 dimensions. The more dimensions you have, when you plot the words on the graph, it is easier to find similar elements
+
+length of the vector is the dimension, when you have 1 value we have 1 dimension, when we have 2 values we have 2 dimensions, which is again the length of the vector. for 3 dimension, the vector-size is 3
+
+Lets say for Dark Red the RGB values are (139, 0, 0)
+Bright Red : (255, 0, 0)
+Dark Blue: (0, 0, 139)
+
+Out of 3 colors, which two are more related? Red and Dark Red are similar. we can see vectors are similar as well
+
+30:18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
