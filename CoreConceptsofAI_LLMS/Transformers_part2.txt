@@ -17,3 +17,96 @@ thats where we have Encoding and Decoding of models
 
 38:30
 
+Encoder: Job of the encoder is to understand what you are trying to say. Encoder takes the input and tries to understand what you are trying to say. Based on the vectors, that data goes to the Decoders
+
+Decoder: based on what you said and your knowledge it is going to create data for you.
+
+I was going to have my _____. if i keep it blank here what happens? "I was going to have my" goes into encoder, the job of Decoder is to generate data for you
+
+Say if you want to summarize an article, entire article will go to Encoder, Encoder will understand article then it will give data to Decoder, Decoder will generate data (summarize, translate, ) etc
+
+I was going to have my _____ .. we have many word options like Dinner with 50%, Nap 30%, ... 5%, 2%
+
+We have a bunch of texts, we want to summarize, the entire text goes into the Encoder. Encoder will try to understand and then that goes into Decoder
+
+Decoder will find the meaning of it.
+
+How do we find embeddings?
+one way by program
+second way by https://platform.openai.com/docs/guides/embeddings
+
+Insomnia is like Postman
+
+I used Postman to get embeddings
+
+POST: "https://api.openai.com/v1/embeddings"
+
+{
+    "model": "text-embedding-3-large",
+    "input": "Dog" 
+}
+
+Output
+
+{
+    "object": "list",
+    "data": [
+        {
+            "object": "embedding",
+            "index": 0,
+            "embedding": [
+                -0.023238905,
+                0.005711523,
+                0.0043288157,
+                .
+                .
+                .
+                .
+                .
+                -0.0022468988,
+                -0.009851787,
+                -0.0043523847
+            ]
+        }
+    ],
+    "model": "text-embedding-3-large",
+    "usage": {
+        "prompt_tokens": 1,
+        "total_tokens": 1
+    }
+}
+
+Dimension is 3072
+
+{
+    "model": "text-embedding-3-large",
+    "input": "Dog",
+    "dimensions": 2 
+}
+
+for dimensions 2
+
+{
+    "object": "list",
+    "data": [
+        {
+            "object": "embedding",
+            "index": 0,
+            "embedding": [
+                -0.9711004,
+                0.23867139
+            ]
+        }
+    ],
+    "model": "text-embedding-3-large",
+    "usage": {
+        "prompt_tokens": 1,
+        "total_tokens": 1
+    }
+}
+
+
+
+Transformers uses embeddings and vectors to predict the next word
+
+
