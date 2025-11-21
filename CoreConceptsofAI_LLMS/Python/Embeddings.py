@@ -16,6 +16,7 @@ for word in words:
     response = client.embeddings.create(
         input=word,
         model="text-embedding-3-small"
+        dimensions=2
     )
     print(f"Word: {word}")
     print(response.data[0].embedding)
@@ -31,6 +32,8 @@ response = client.embeddings.create(
 
 print(response.data[0].embedding)
 print(len(response.data[0].embedding))
+embedding = response.data[0].embedding
+print(f"{word} = ({embedding[0]:.6f}, {embedding[1]:.6f})")
 
 
 ### Output

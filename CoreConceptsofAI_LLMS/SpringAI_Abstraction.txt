@@ -1,0 +1,40 @@
+Abstraction
+In a project, we dont want to stick to only one model, we want text generation with one model then another model for images etc. to generate code, Antropic is better
+
+if you go to OpenAI, Gemini or Anthropic, the template code is very different. we cannot have different kind of code for OpenAI model, Gemini etc. this will create inconsistencies. To solve that problem, we have to create an Abstraction layer, regardless of what model i am using the code should remain the same
+
+Example
+import com.openai.client.OpenAIClient;
+import com.openai.client.okhttp.OpenAIOkHttpClient;
+import com.openai.models.responses.Response;
+import com.openai.models.responses.ResponseCreateParams;
+
+public class Main {
+    public static void main(String[] args) {
+        OpenAIClient client = OpenAIOkHttpClient.fromEnv();
+
+        ResponseCreateParams params = ResponseCreateParams.builder()
+                .input("Say this is a test")
+                .model("gpt-5-nano")
+                .build();
+
+        Response response = client.responses().create(params);
+        System.out.println(response.outputText());
+    }
+}
+Instead of writing this particular code, there should be a way to create some abstraction
+To achieve abstraction, one of the frameworks is SpringAI
+
+https://spring.io/
+
+One of the projects
+https://spring.io/projects/spring-ai
+
+Spring AI is an application framework for AI engineering. Its goal is to apply to the AI domain Spring ecosystem design principles such as portability and modular design and promote using POJOs as the building blocks of an application to the AI domain.
+
+if you want to build application with AI capabilities, then we require SpringAI
+
+SpringAI creates an abstraction layer for you. 
+
+SpringAI supports for all major AI Model providers such as Anthropic, OpenAI, Microsoft, Amazon, Google, and Ollama. 
+
