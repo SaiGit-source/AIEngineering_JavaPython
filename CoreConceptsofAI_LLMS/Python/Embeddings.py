@@ -10,6 +10,19 @@ api_key = os.getenv("OPENAI_API_KEY")
 from openai import OpenAI
 client = OpenAI()
 
+words = ["Dog", "Cat", "Apple", "Orange", "Car", "Bus", "Tree", "Flower", "Computer", "Phone"]
+
+for word in words:
+    response = client.embeddings.create(
+        input=word,
+        model="text-embedding-3-small"
+    )
+    print(f"Word: {word}")
+    print(response.data[0].embedding)
+    print(len(response.data[0].embedding))
+    print("\n")
+    
+    
 response = client.embeddings.create(
     input="Dog",
     model="text-embedding-3-small",
