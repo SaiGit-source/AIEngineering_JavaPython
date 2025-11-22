@@ -1,0 +1,40 @@
+go to https://spring.io/projects/spring-ai
+
+https://docs.spring.io/spring-ai/reference/1.0/index.html
+
+Create a SpringAI projects
+
+https://start.spring.io/
+
+Select Maven, Java, Spring Boot 3.5.8, Java 25, Properties
+
+Download OpenJDK from here: https://jdk.java.net/25/
+
+
+Dependencies: OpenAI, Spring Web
+
+Generate project
+
+Move the project to SpringAI folder
+Open in IntelliJ
+When we try to run the Java file, we see errors because OpenAI_API_Key was not setup
+Caused by: java.lang.IllegalArgumentException: OpenAI API key must be set. Use the connection property: spring.ai.openai.api-key or spring.ai.openai.speech.api-key property.
+
+
+do it in resources --> application.properties file
+add spring.ai.openai.api-key="your_api_key"
+
+re-run application in IntelliJ
+
+Add AIController --> Go to Postman --> Get request --> http://localhost:8080/
+
+App -----> OpenAI (SpringAI uses something called as 'ChatModel' to connect with OpenAI)
+For OpenAI, it will be OpenAI chatmodel, for Anthropic, it will be Anthropic chatmodel
+
+
+
+
+
+
+
+
