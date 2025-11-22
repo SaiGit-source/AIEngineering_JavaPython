@@ -76,6 +76,18 @@ public class SpringAiDemoApplication {
 
 		 */
 
+		// in application.properties, you can specify model name
+		// spring.ai.openai.chat.options.model=gpt-4o
+
+		// http://localhost:8080/api/chatclient/input/v1/recommend a movie with good background name, only movie name
+		// Output
+		// "Inception"
+
+        /* printed on console
+        gpt-4o-2024-08-06
+        21
+         */
+
 	}
 
 
