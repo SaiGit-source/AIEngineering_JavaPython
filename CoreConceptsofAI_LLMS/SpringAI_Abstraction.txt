@@ -38,3 +38,9 @@ SpringAI creates an abstraction layer for you.
 
 SpringAI supports for all major AI Model providers such as Anthropic, OpenAI, Microsoft, Amazon, Google, and Ollama. 
 
+Langchain supports both Python and Typescript
+
+Documentation: https://docs.spring.io/spring-ai/reference/api/structured-output-converter.html
+
+Go to start.spring.io --> Add Dependencies --> OpenAI package add --> Generate
+(All packages are there --> Gemini, Ollama etc)

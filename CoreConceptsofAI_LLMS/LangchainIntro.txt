@@ -1,0 +1,10 @@
+"
+
+The Spring AI project aims to streamline the development of applications that incorporate artificial intelligence functionality without unnecessary complexity.
+
+The project draws inspiration from notable Python projects, such as LangChain and LlamaIndex, but Spring AI is not a direct port of those projects. "
+
+Langchain came first
+
+https://www.langchain.com/
+
