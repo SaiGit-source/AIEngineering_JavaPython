@@ -19,5 +19,15 @@ uv add langchain-openai
 
  done with packages
 
- 17:25
+ Two styles of coding: Imperative and Declarative
+ Imperative is you write every line of code by yourself. Do this after this etc
+ Declarative --> you specify what you want then the system behind the scenes will do things for you. Example SQL --> if you want to fetch some data from database, you dont specify how to go to Database etc
+ Which is better? it depends. 
+ LangChain is more Declarative because you specify what you want and it will do things for you
 
+ The advantage of using SpringAI is SpringAI is connected to SpringBoot
+ However, when you connect LangChain to FastAPI there could be some issues
+
+ This is LangChain for Java: https://docs.langchain4j.dev/
+
+Next is SpringAI with memory, LangChain with memory
