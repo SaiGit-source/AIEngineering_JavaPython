@@ -1,0 +1,23 @@
+What's Langchain?
+It's an abstract layer, which helps you to build application on LLMs.
+Langchain now has multiple products like Langgraph, Langsmith. Langgraph is mostly for building agents. 2025 is the year of agents.
+https://www.langchain.com/
+https://www.langchain.com/langgraph
+
+i use VSCode for Langchain
+
+Add packages in uv virtual environment
+uv add langchain-core
+with Langchain we get Langsmith
+ + langchain-core==1.1.0
+ + langsmith==0.4.47
+ + openai==2.8.1
+
+uv add langchain-openai
+ + langchain-openai==1.1.0
+ + regex==2025.11.3
+
+ done with packages
+
+ 17:25
+

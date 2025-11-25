@@ -15,7 +15,7 @@ words = ["Dog", "Cat", "Apple", "Orange", "Car", "Bus", "Tree", "Flower", "Compu
 for word in words:
     response = client.embeddings.create(
         input=word,
-        model="text-embedding-3-small"
+        model="text-embedding-3-small",
         dimensions=2
     )
     print(f"Word: {word}")
