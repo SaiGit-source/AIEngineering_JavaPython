@@ -1,0 +1,19 @@
+Open ConversationalAI in VSCode.
+npm install
+npm run dev
+
+this will get the UI up and running on local.
+
+Say you ask "What's Java?"
+Then "What's JVM?"
+Then "How are they 2 related?"
+Then it knows nothing, it responds "Sorry no idea" because there is no memory
+we got to add memory Then
+
+you can store the history either in memory or temporary database
+
+Other point is formatting the output. When we wanted movie recommendation, we were sending some request and getting some output
+What if you want the output in the proper format? Thats where we could use something called as a 'Prompt Template'. you can create a Prompt Template, basically a String
+We can have some pre-defined stuff and add user-text and you can display data in a particular format
+
+
