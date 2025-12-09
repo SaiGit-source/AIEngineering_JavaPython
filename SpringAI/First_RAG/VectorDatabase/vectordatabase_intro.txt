@@ -1,0 +1,39 @@
+Vector Database
+We want to go towards RAG, we want to build up towards that
+
+If AI has to do some generations or classifications for you, then it has to make a sense of the data. that means we have to store words in such a way that they are related. so when you search for something you should be able to find it. thats where Embedding comes into picture.
+You take a sentence, you convert them into words then tokens --> tokens to numbers (Embeddings)
+Where are we going to store this data/Embeddings?
+In normal database, it is ok to store numbers, strings etc
+But for AI, we have Embeddings, how to store Embeddings?
+thats where we have a special type of database that's the Vector database.
+In Vector database, we can not only store Embeddings but also can retrieve in the correct form
+
+Say you want to convert the word "watch" into Embeddings, the result is a Vector
+if the dimension is set to 1000 then we will get 1000 numbers, depending on the dimension
+
+According to IBM: https://www.ibm.com/think/topics/vector-database
+
+
+What is a vector database?
+A vector database stores, manages and indexes high-dimensional vector data. Data points are stored as arrays of numbers called “vectors,” which are clustered based on similarity. This design enables low-latency queries, making it ideal for AI applications.
+
+Vector database use cases
+
+The applications for vector databases are vast and growing. Some key use cases include:
+    Retrieval-augmented generation (RAG)
+    Conversational AI
+    Recommendation engines
+    Vector search
+
+Yes Vector database can be used for RAG or Conversational AI
+
+https://docs.spring.io/spring-ai/reference/api/vectordbs.html
+
+We have Azure Cosmos DB, MariaDB vectorstore, PGVector
+
+For PGVector we got to run on Docker. 
+
+When Oracle bought MySQL, we got a clone of MySQL, which is MariaDB
+ 
+Initially we will start with SimpleVectorStore (https://docs.spring.io/spring-ai/docs/current/api/org/springframework/ai/vectorstore/SimpleVectorStore.html) and use it as InMemory store
