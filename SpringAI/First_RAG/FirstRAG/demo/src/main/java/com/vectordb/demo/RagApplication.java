@@ -26,6 +26,29 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 // Step 2: Where are we going to use it?
 // even if we search for Tea or Coffee it should suggest this product: "Electric Coffee Grinder"
 
+/* for MariaDB:
+we need to add Dependency
+Since it is MySQL-based we need to add JDBC dependencies as well
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-jdbc</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.ai</groupId>
+      <artifactId>spring-ai-starter-vector-store-mariadb</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.mariadb.jdbc</groupId>
+      <artifactId>mariadb-java-client</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+
+
+ */
+
 @SpringBootApplication
 public class RagApplication {
 

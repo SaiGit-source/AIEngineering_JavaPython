@@ -6,12 +6,12 @@ import org.springframework.ai.vectorstore.VectorStore;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//@Configuration
 public class AppConfig {
 
     // bean that will return the VectorStore object
     // SimpleVectorStore is an in-memory data store, it needs an Embedding model to convert words into Vectors. Vector store will only store embeddings not convert
-    @Bean
+    //@Bean
     public VectorStore getVectorStore(EmbeddingModel embeddingModel){
         return SimpleVectorStore.builder(embeddingModel).build();
     }

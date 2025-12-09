@@ -31,7 +31,8 @@ public class DataInit {
         // when you work with huge amount of data, we cant just put everything in one place, what you do it, you break down this data into chunks. You store those chunks in database and we call them as "Documents"
         // one chunk becomes one row for you
         // we can break down into chunk using TokenTextSplitter
-        TokenTextSplitter splitter = new TokenTextSplitter(); // customize the document retrieval. if you have a very big text but if you create documents with small chunkSizes then you will have way more documents, which we dont want. we got to find the trade-offs between TextSize and Num of documents (based on chunk-size)
+        //TokenTextSplitter splitter = new TokenTextSplitter(); // customize the document retrieval. if you have a very big text but if you create documents with small chunkSizes then you will have way more documents, which we dont want. we got to find the trade-offs between TextSize and Num of documents (based on chunk-size)
+        TokenTextSplitter splitter = new TokenTextSplitter(150, 150, 50, 100, true); // from ChatGPT
         List<Document> documents = splitter.split(textReader.read()); // textReader will read the text file, splitter will split the text. Splitter will convert into List of Documents
         vectorStore.add(documents);
     }
