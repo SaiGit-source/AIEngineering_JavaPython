@@ -13,7 +13,7 @@ public class NewsTool {
     @Tool(description = "Get current news headlines for specific topic")
     public String getNewsHeadlines(String topic){
 
-        String apiKey = "51716d93023c4a23af2aa68cbbe490c3";
+        String apiKey = "****************";
         String url = "https://newsapi.org/v2/everything?q="+topic+ "&apiKey=" +apiKey;
         String result = restTemplate.getForObject(url, String.class);
         return "News headlines for "+topic + ": " + result;

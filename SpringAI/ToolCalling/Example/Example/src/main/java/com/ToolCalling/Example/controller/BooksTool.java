@@ -12,7 +12,7 @@ public class BooksTool {
     @Tool(description = "Get book availability and purchase location or link")
     public String getBookAvailabilityandPurchaseLink(String bookname){
 
-        String apiKey = "51716d93023c4a23af2aa68cbbe490c3";
+        String apiKey = "**************";
         String url = "https://newsapi.org/v2/everything?q="+bookname+ "&apiKey=" +apiKey;
         String result = restTemplate.getForObject(url, String.class);
         return "Book is "+bookname + ": " + result;
