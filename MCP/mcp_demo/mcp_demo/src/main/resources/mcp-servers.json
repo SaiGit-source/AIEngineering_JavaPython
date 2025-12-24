@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx.cmd",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:/Users/saito/source/repos/AIEngineering_JavaPython/MCP/mcp_server"
+      ]
+    }
+  }
+}
