@@ -1,0 +1,267 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 130023424 bytes. Error detail: G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3554), pid=381264, tid=386980
+#
+# JRE version:  (25.0.1+8) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.0.1+8-27, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.2\lib\idea_rt.jar=65242:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.2\bin -Dfile.encoding=UTF-8 -Xmx1024M com.SpringAI.mcp_demo.McpDemoApplication
+
+Host: 12th Gen Intel(R) Core(TM) i3-1215U, 8 cores, 7G,  Windows 11 , 64 bit Build 22621 (10.0.22621.5415)
+Time: Tue Dec 23 20:13:55 2025 Eastern Standard Time elapsed time: 0.203002 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001c46a6d1e50):  JavaThread "Unknown thread" [_thread_in_vm, id=386980, stack(0x0000008028e00000,0x0000008028f00000) (1024K)]
+
+Stack: [0x0000008028e00000,0x0000008028f00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x7a6b59]  (no source info available)
+V  [jvm.dll+0x77290d]  (no source info available)
+V  [jvm.dll+0x966153]  (no source info available)
+V  [jvm.dll+0x968751]  (no source info available)
+V  [jvm.dll+0x968e53]  (no source info available)
+V  [jvm.dll+0x2fc756]  (no source info available)
+V  [jvm.dll+0x7a2d85]  (no source info available)
+V  [jvm.dll+0x796197]  (no source info available)
+V  [jvm.dll+0x3f4698]  (no source info available)
+V  [jvm.dll+0x3fc5b6]  (no source info available)
+V  [jvm.dll+0x3e8c8e]  (no source info available)
+V  [jvm.dll+0x3e8f48]  (no source info available)
+V  [jvm.dll+0x3c0045]  (no source info available)
+V  [jvm.dll+0x3c0cce]  (no source info available)
+V  [jvm.dll+0x92c837]  (no source info available)
+V  [jvm.dll+0x458bc2]  (no source info available)
+V  [jvm.dll+0x9101e2]  (no source info available)
+V  [jvm.dll+0x4f9061]  (no source info available)
+V  [jvm.dll+0x4fa8f1]  (no source info available)
+C  [jli.dll+0x543e]  (no source info available)
+C  [ucrtbase.dll+0x29333]  (no source info available)
+C  [KERNEL32.DLL+0x1259d]  (no source info available)
+C  [ntdll.dll+0x5af78]  (no source info available)
+
+Lock stack of current Java thread (top to bottom):
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff8529c5308, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+Total: 0
+
+Other Threads:
+  0x000001c46a70cc80 WorkerThread "GC Thread#0"                     [id=387916, stack(0x0000008028f00000,0x0000008029000000) (1024K)]
+  0x000001c46a719ed0 ConcurrentGCThread "G1 Main Marker"            [id=388128, stack(0x0000008029000000,0x0000008029100000) (1024K)]
+  0x000001c46a71aa70 WorkerThread "G1 Conc#0"                       [id=388212, stack(0x0000008029100000,0x0000008029200000) (1024K)]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff8520a4c2a]
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007ff852a49668] Heap_lock - owner thread: 0x000001c46a6d1e50
+
+Heap address: 0x00000000c0000000, size: 1024 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+UseCompressedClassPointers 1, UseCompactObjectHeaders 0
+Narrow klass pointer bits 32, Max shift 3
+Narrow klass base: 0xffffffffffffffff, Narrow klass shift: -1
+Encoding Range: [0xffffffffffffffff - 0x000000007fffffff), (2147483648 bytes)
+Klass Range:    [0x0000000000000000 - 0x0000000000000000), (0 bytes)
+Klass ID Range:  [4294967295 - 0) (1)
+No protection zone.
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 10 size 36 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+
+Heap:
+ garbage-first heap   total reserved 1048576K, committed 0K, used 0K [0x00000000c0000000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, TAMS=top-at-mark-start, PB=parsable bottom
+
+Card table byte_map: [0x000001c473590000,0x000001c473790000] _byte_map_base: 0x000001c472f90000
+
+Marking Bits: (CMBitMap*) 0x000001c46a70d410
+ Bits: [0x000001c473790000, 0x000001c474790000)
+
+GC Heap Usage History (0 events):
+No events
+
+Metaspace Usage History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.140 Loaded shared library C:\Users\saito\Downloads\openjdk-25.0.1_windows-x64_bin\jdk-25.0.1\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Memory protections (0 events):
+No events
+
+Nmethod flushes (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff7958b0000 - 0x00007ff7958be000 	C:\Users\saito\Downloads\openjdk-25.0.1_windows-x64_bin\jdk-25.0.1\bin\java.exe
+0x00007ff8fb3f0000 - 0x00007ff8fb608000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff8fb140000 - 0x00007ff8fb204000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff8f8580000 - 0x00007ff8f8953000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff8e7070000 - 0x00007ff8e7087000 	C:\Users\saito\Downloads\openjdk-25.0.1_windows-x64_bin\jdk-25.0.1\bin\jli.dll
+0x00007ff8e7000000 - 0x00007ff8e701e000 	C:\Users\saito\Downloads\openjdk-25.0.1_windows-x64_bin\jdk-25.0.1\bin\VCRUNTIME140.dll
+0x00007ff8f8960000 - 0x00007ff8f8a71000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff8f9380000 - 0x00007ff8f9532000 	C:\Windows\System32\USER32.dll
+0x00007ff8f8e50000 - 0x00007ff8f8e76000 	C:\Windows\System32\win32u.dll
+0x00007ff8fa1b0000 - 0x00007ff8fa1d9000 	C:\Windows\System32\GDI32.dll
+0x00007ff8f8bc0000 - 0x00007ff8f8cdb000 	C:\Windows\System32\gdi32full.dll
+0x00007ff8f8f70000 - 0x00007ff8f900a000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff8e98d0000 - 0x00007ff8e9b6c000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.6060_none_2712eda17382d24b\COMCTL32.dll
+0x00007ff8fa2a0000 - 0x00007ff8fa347000 	C:\Windows\System32\msvcrt.dll
+0x00007ff8fab70000 - 0x00007ff8faba1000 	C:\Windows\System32\IMM32.DLL
+0x00007ff8e6ff0000 - 0x00007ff8e6ffc000 	C:\Users\saito\Downloads\openjdk-25.0.1_windows-x64_bin\jdk-25.0.1\bin\vcruntime140_1.dll
+0x00007ff8acb80000 - 0x00007ff8acc0d000 	C:\Users\saito\Downloads\openjdk-25.0.1_windows-x64_bin\jdk-25.0.1\bin\msvcp140.dll
+0x00007ff851cd0000 - 0x00007ff852b2f000 	C:\Users\saito\Downloads\openjdk-25.0.1_windows-x64_bin\jdk-25.0.1\bin\server\jvm.dll
+0x00007ff8fa3f0000 - 0x00007ff8fa4a1000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff8fa1e0000 - 0x00007ff8fa288000 	C:\Windows\System32\sechost.dll
+0x00007ff8f8e80000 - 0x00007ff8f8ea8000 	C:\Windows\System32\bcrypt.dll
+0x00007ff8fb290000 - 0x00007ff8fb3a8000 	C:\Windows\System32\RPCRT4.dll
+0x00007ff8f9250000 - 0x00007ff8f92c1000 	C:\Windows\System32\WS2_32.dll
+0x00007ff8f5930000 - 0x00007ff8f5964000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff8ec200000 - 0x00007ff8ec20a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff8f7e80000 - 0x00007ff8f7ecd000 	C:\Windows\SYSTEM32\POWRPROF.dll
+0x00007ff8f7df0000 - 0x00007ff8f7e03000 	C:\Windows\SYSTEM32\UMPDC.dll
+0x00007ff8f74a0000 - 0x00007ff8f74b8000 	C:\Windows\SYSTEM32\kernel.appcore.dll
+0x00007ff8e6b90000 - 0x00007ff8e6b9a000 	C:\Users\saito\Downloads\openjdk-25.0.1_windows-x64_bin\jdk-25.0.1\bin\jimage.dll
+0x00007ff8f5dc0000 - 0x00007ff8f5ff3000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ff8fada0000 - 0x00007ff8fb131000 	C:\Windows\System32\combase.dll
+0x00007ff8f9540000 - 0x00007ff8f9618000 	C:\Windows\System32\OLEAUT32.dll
+0x00007ff8e6a90000 - 0x00007ff8e6ac2000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ff8f8500000 - 0x00007ff8f857b000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ff8e6b80000 - 0x00007ff8e6b90000 	C:\Users\saito\Downloads\openjdk-25.0.1_windows-x64_bin\jdk-25.0.1\bin\instrument.dll
+0x00007ff8e6b60000 - 0x00007ff8e6b7f000 	C:\Users\saito\Downloads\openjdk-25.0.1_windows-x64_bin\jdk-25.0.1\bin\java.dll
+0x00007ff8f9760000 - 0x00007ff8f9901000 	C:\Windows\System32\ole32.dll
+0x00007ff8f9910000 - 0x00007ff8fa1ac000 	C:\Windows\System32\SHELL32.dll
+0x00007ff8f8a80000 - 0x00007ff8f8bbf000 	C:\Windows\System32\wintypes.dll
+
+JVMTI agents:
+C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.2\lib\idea_rt.jar path:none, loaded, not initialized, instrumentlib options:65242:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.2\bin
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\saito\Downloads\openjdk-25.0.1_windows-x64_bin\jdk-25.0.1\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.6060_none_2712eda17382d24b;C:\Users\saito\Downloads\openjdk-25.0.1_windows-x64_bin\jdk-25.0.1\bin\server
+
+VM Arguments:
+jvm_args: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.2\lib\idea_rt.jar=65242:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.2\bin -Dfile.encoding=UTF-8 -Xmx1024M 
+java_command: com.SpringAI.mcp_demo.McpDemoApplication
+java_class_path (initial): C:\Users\saito\source\repos\AIEngineering_JavaPython\MCP\mcp_demo\mcp_demo\target\classes;C:\Users\saito\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.5.9\spring-boot-starter-web-3.5.9.jar;C:\Users\saito\.m2\repository\org\springframework\boot\spring-boot-starter\3.5.9\spring-boot-starter-3.5.9.jar;C:\Users\saito\.m2\repository\org\springframework\boot\spring-boot\3.5.9\spring-boot-3.5.9.jar;C:\Users\saito\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.5.9\spring-boot-autoconfigure-3.5.9.jar;C:\Users\saito\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.5.9\spring-boot-starter-logging-3.5.9.jar;C:\Users\saito\.m2\repository\ch\qos\logback\logback-classic\1.5.22\logback-classic-1.5.22.jar;C:\Users\saito\.m2\repository\ch\qos\logback\logback-core\1.5.22\logback-core-1.5.22.jar;C:\Users\saito\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.24.3\log4j-to-slf4j-2.24.3.jar;C:\Users\saito\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\saito\.m2\repository\org\slf4j\jul-to-slf4j\2.0.17\jul-to-slf4j-2.0.17.jar;C:\Users\saito\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\saito\.m2\repository\org\yaml\snakeyaml\2.4\snakeyaml-2.4.jar;C:\Users\saito\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.5.9\spring-boot-starter-json-3.5.9.jar;C:\Users\saito\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.19.4\jackson-databind-2.19.4.jar;C:\Users\saito\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.19.4\jackson-annotations-2.19.4.jar;C:\Users\saito\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.19.4\jackson-core-2.19.4.jar;C:\Users\saito\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.19.4\jackson-datatype-jdk8-2.19.4.jar;C:\Users\saito\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.19.4\jackson-datatype-jsr310-2.19.4.jar;C:\Users\saito\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.19.4\jackson-module-parameter-names-2.19.4.jar;C:\Users\saito\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.5.9\spring-boot-starter-tomcat-3.5.9.jar;C:\Users\saito\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.50\tomcat-embed-core-10.1.50.jar;C:\Users\saito\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.50\tomcat-embed-el-10.1.50.jar;C:\Users\saito\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.50\tomcat-embed-websocket-10.1.50.jar;C:\Users\saito\.m2\repository\org\springframework\spring-web\6.2.15\spring-web-6.2.15.jar;C:\Users\saito\.m2\repository\org\springframework\spring-beans\6.2.15\spring-beans-6.2.15.jar;C:\Users\saito\.m2\repository\io\micrometer\micrometer-observation\1.15.7\micrometer-observation-1.15.7.jar;C:\Users\saito\.m2\repository\io\micrometer\micrometer-commons\1.15.7\micrometer-commons-1.15.7.jar;C:\Users\saito\.m2\repository\org\springframework\spring-webmvc\6.2.15\spring-webmvc-6.2.15.jar;C:\Users\saito\.m2\repository\org\springframework\spring-aop\6.2.15\spring-aop-6.2.15.jar;C:\Users\saito\.m2\repository\org\springframework\spring-context\6.2.15\spring-context-6.2.15.jar;C:\Users\saito\.m2\repository\org\springframework\spring-expression\6.2.15\spring-expression-6.2.15.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-starter-mcp-client\1.1.2\spring-ai-starter-mcp-client-1.1.2.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-autoconfigure-mcp-client-httpclient\1.1.2\spring-ai-autoconfigure-mcp-client-httpclient-1.1.2.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-autoconfigure-mcp-client-common\1.1.2\spring-ai-autoconfigure-mcp-client-common-1.1.2.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-mcp\1.1.2\spring-ai-mcp-1.1.2.jar;C:\Users\saito\.m2\repository\io\modelcontextprotocol\sdk\mcp\0.17.0\mcp-0.17.0.jar;C:\Users\saito\.m2\repository\io\modelcontextprotocol\sdk\mcp-json-jackson2\0.17.0\mcp-json-jackson2-0.17.0.jar;C:\Users\saito\.m2\repository\io\modelcontextprotocol\sdk\mcp-json\0.17.0\mcp-json-0.17.0.jar;C:\Users\saito\.m2\repository\com\networknt\json-schema-validator\2.0.0\json-schema-validator-2.0.0.jar;C:\Users\saito\.m2\repository\com\ethlo\time\itu\1.14.0\itu-1.14.0.jar;C:\Users\saito\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.19.4\jackson-dataformat-yaml-2.19.4.jar;C:\Users\saito\.m2\repository\io\modelcontextprotocol\sdk\mcp-core\0.17.0\mcp-core-0.17.0.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-model\1.1.2\spring-ai-model-1.1.2.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-commons\1.1.2\spring-ai-commons-1.1.2.jar;C:\Users\saito\.m2\repository\io\micrometer\micrometer-core\1.15.7\micrometer-core-1.15.7.jar;C:\Users\saito\.m2\repository\org\hdrhistogram\HdrHistogram\2.2.2\HdrHistogram-2.2.2.jar;C:\Users\saito\.m2\repository\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;C:\Users\saito\.m2\repository\io\micrometer\context-propagation\1.1.3\context-propagation-1.1.3.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-template-st\1.1.2\spring-ai-template-st-1.1.2.jar;C:\Users\saito\.m2\repository\org\antlr\ST4\4.3.4\ST4-4.3.4.jar;C:\Users\saito\.m2\repository\org\antlr\antlr-runtime\3.5.3\antlr-runtime-3.5.3.jar;C:\Users\saito\.m2\repository\org\springframework\spring-messaging\6.2.15\spring-messaging-6.2.15.jar;C:\Users\saito\.m2\repository\io\projectreactor\reactor-core\3.7.14\reactor-core-3.7.14.jar;C:\Users\saito\.m2\repository\org\reactivestreams\reactive-streams\1.0.4\reactive-streams-1.0.4.jar;C:\Users\saito\.m2\repository\org\antlr\antlr4-runtime\4.13.1\antlr4-runtime-4.13.1.jar;C:\Users\saito\.m2\repository\com\github\victools\jsonschema-module-swagger-2\4.38.0\jsonschema-module-swagger-2-4.38.0.jar;C:\Users\saito\.m2\repository\io\swagger\core\v3\swagger-annotations-jakarta\2.2.38\swagger-annotations-jakarta-2.2.38.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-mcp-annotations\1.1.2\spring-ai-mcp-annotations-1.1.2.jar;C:\Users\saito\.m2\repository\org\springaicommunity\mcp-annotations\0.8.0\mcp-annotations-0.8.0.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-starter-model-openai\1.1.2\spring-ai-starter-model-openai-1.1.2.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-autoconfigure-model-openai\1.1.2\spring-ai-autoconfigure-model-openai-1.1.2.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-autoconfigure-model-tool\1.1.2\spring-ai-autoconfigure-model-tool-1.1.2.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-autoconfigure-retry\1.1.2\spring-ai-autoconfigure-retry-1.1.2.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-autoconfigure-model-chat-observation\1.1.2\spring-ai-autoconfigure-model-chat-observation-1.1.2.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-autoconfigure-model-embedding-observation\1.1.2\spring-ai-autoconfigure-model-embedding-observation-1.1.2.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-autoconfigure-model-image-observation\1.1.2\spring-ai-autoconfigure-model-image-observation-1.1.2.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-openai\1.1.2\spring-ai-openai-1.1.2.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-retry\1.1.2\spring-ai-retry-1.1.2.jar;C:\Users\saito\.m2\repository\org\springframework\retry\spring-retry\2.0.12\spring-retry-2.0.12.jar;C:\Users\saito\.m2\repository\com\github\victools\jsonschema-generator\4.38.0\jsonschema-generator-4.38.0.jar;C:\Users\saito\.m2\repository\com\fasterxml\classmate\1.7.1\classmate-1.7.1.jar;C:\Users\saito\.m2\repository\com\github\victools\jsonschema-module-jackson\4.38.0\jsonschema-module-jackson-4.38.0.jar;C:\Users\saito\.m2\repository\org\springframework\spring-context-support\6.2.15\spring-context-support-6.2.15.jar;C:\Users\saito\.m2\repository\org\springframework\spring-webflux\6.2.15\spring-webflux-6.2.15.jar;C:\Users\saito\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-autoconfigure-model-chat-client\1.1.2\spring-ai-autoconfigure-model-chat-client-1.1.2.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-client-chat\1.1.2\spring-ai-client-chat-1.1.2.jar;C:\Users\saito\.m2\repository\com\fasterxml\jackson\module\jackson-module-jsonSchema\2.19.4\jackson-module-jsonSchema-2.19.4.jar;C:\Users\saito\.m2\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;C:\Users\saito\.m2\repository\com\knuddels\jtokkit\1.1.0\jtokkit-1.1.0.jar;C:\Users\saito\.m2\repository\org\springframework\ai\spring-ai-autoconfigure-model-chat-memory\1.1.2\spring-ai-autoconfigure-model-chat-memory-1.1.2.jar;C:\Users\saito\.m2\repository\org\springframework\spring-core\6.2.15\spring-core-6.2.15.jar;C:\Users\saito\.m2\repository\org\springframework\spring-jcl\6.2.15\spring-jcl-6.2.15.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+   size_t InitialHeapSize                          = 130023424                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MarkStackSizeMax                         = 536870912                                 {product} {ergonomic}
+   size_t MaxHeapSize                              = 1073741824                                {product} {command line}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832704                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122945536                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122880000                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 1073741824                             {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Release file:
+<release file has not been read>
+Environment Variables:
+JAVA_HOME=C:\Users\saito\Downloads\openjdk-22.0.2_windows-x64_bin\jdk-22.0.2
+_JAVA_OPTIONS=-Xmx1024M
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Users\saito\Downloads\openjdk-22.0.2_windows-x64_bin\jdk-22.0.2;C:\Program Files\nodejs\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files\Git\bin;C:\Users\saito\Downloads\openjdk-22.0.2_windows-x64_bin\jdk-22.0.2\bin;C:\Users\saito\source\repos\Telusko_Java_Enterprise_Spring\Kafka\Kafka\bin\windows;C:\Kafka\bin\windows;C:\Kafka\bin\windows;C:\Users\saito\Downloads\openjdk-22.0.2_windows-x64_bin\jdk-22.0.2;C:\Program Files\Amazon\AWSCLIV2\;C:\Users\saito\source\repos\terraform_1.11.3;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\saito\AppData\Local\Programs\Python\Launcher\;C:\Users\saito\AppData\Local\Microsoft\WindowsApps;C:\Users\saito\Downloads\openjdk-22.0.2_windows-x64_bin\jdk-22.0.2\bin;C:\Users\saito\Downloads\openjdk-22.0.2_windows-x64_bin\jdk-22.0.2;C:\Users\saito\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\saito\AppData\Roaming\npm;C:\Program Files\nodejs\;C:\Users\saito\.dotnet\tools;C:\Program Files\Git\bin\;C:\Program Files\Git\cmd;C:\Program Files\Git\bin\git.exe;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\Users\saito\AppData\Local\Programs\mongosh\;C:\Kafka\bin\windows;C:\Users\saito\source\repos\terraform_1.11.3;C:\Users\saito\AppData\Local\Microsoft\WinGet\Packages\astral-sh.uv_Microsoft.Winget.Source_8wekyb3d8bbwe;
+USERNAME=saito
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 154 Stepping 4, GenuineIntel
+TMP=C:\Users\saito\AppData\Local\Temp
+TEMP=C:\Users\saito\AppData\Local\Temp
+
+
+
+
+Compilation memory statistics disabled.
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.5415)
+OS uptime: 9 days 6:01 hours
+Hyper-V role detected
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 154 stepping 4 microcode 0x437, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, clwb, hv, serialize, rdtscp, rdpid, fsrm, gfni, f16c, cet_ibt, cet_ss
+Processor Information for the first 8 processors :
+  Max Mhz: 1200, Current Mhz: 1200, Mhz Limit: 1200
+
+Memory: 4k page, system-wide physical 7876M (215M free)
+TotalPageFile size 32452M (AvailPageFile size 25M)
+current process WorkingSet (physical memory assigned to process): 12M, peak: 12M
+current process commit charge ("private bytes"): 60M, peak: 184M
+
+vm_info: OpenJDK 64-Bit Server VM (25.0.1+8-27) for windows-amd64 JRE (25.0.1+8-27), built on 2025-09-25T16:41:16Z with unknown MS VC++:1943
+
+END.
