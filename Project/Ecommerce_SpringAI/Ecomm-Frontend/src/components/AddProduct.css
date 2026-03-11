@@ -1,0 +1,50 @@
+.add-product-page {
+  background: linear-gradient(135deg, #8e949c, #44547e);
+  min-height: 100vh;
+}
+.add-product-card {
+  border-radius: 16px;
+  border: none;
+  background: #838080;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+
+.add-product-title {
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  transition: 0.2s;
+}
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+textarea.form-control {
+  resize: none;
+}
+
+.btn-primary {
+  background: #6f42c1;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #5a35a0;
+}
+
+.ai-btn {
+  border-radius: 20px;
+}

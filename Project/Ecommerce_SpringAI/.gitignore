@@ -1,0 +1,88 @@
+# =========================
+
+# Node / React / Vite
+
+# =========================
+
+Ecomm-Frontend/node_modules/
+Ecomm-Frontend/dist/
+Ecomm-Frontend/build/
+Ecomm-Frontend/.vite/
+Ecomm-Frontend/npm-debug.log*
+Ecomm-Frontend/yarn-debug.log*
+Ecomm-Frontend/yarn-error.log*
+Ecomm-Frontend/pnpm-debug.log*
+
+# Environment variables
+
+.env
+.env.*
+!.env.example
+
+# =========================
+
+# Spring Boot / Java
+
+# =========================
+
+target/
+*.log
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven
+
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+
+.gradle/
+build/
+
+# =========================
+
+# IDEs
+
+# =========================
+
+# IntelliJ
+
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VSCode
+
+.vscode/
+
+# Eclipse / Spring Tool Suite
+
+.metadata/
+.settings/
+.project
+.classpath
+.springBeans
+.factorypath
+
+# =========================
+
+# OS files
+
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+
+# Misc
+
+# =========================
+
+coverage/
+logs/
+temp/
+tmp/
