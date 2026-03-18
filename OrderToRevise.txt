@@ -3,3 +3,5 @@
 3.Langchain
 4.MCP
 5.AI_Agents
+6.Project
+7.HuggingFace
