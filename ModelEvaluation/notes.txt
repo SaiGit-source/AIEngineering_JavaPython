@@ -1,0 +1,22 @@
+Model Evaluation
+
+Every model has something in mind when they got started. Later they competed with others and found their strengths.
+Artificial Analysis gives the benchmark:
+https://artificialanalysis.ai/models
+https://livebench.ai/#/?highunseenbias=true
+
+We are going to look into model evaluation in two ways: 1. benchmark provided by this website 2. Code
+
+We have a Jupyter notebook code to evaluate models
+
+Different models were built for different purposes and we want to evaluate them based on our use-case
+
+Say we want to use the models for solving mathematical problems, thats one use-case
+We want a model to be very creative
+We want a model to generate code - another use-case
+You want to test a model whether it is smarter than humans, for this we give competitive exams to AI
+
+
+
+
+
