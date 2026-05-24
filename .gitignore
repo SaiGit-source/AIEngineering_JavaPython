@@ -28,6 +28,8 @@ htmlcov/
 venv/
 env/
 ENV/
+.env/
+env.bak/
 
 # Python packaging artifacts
 build/
