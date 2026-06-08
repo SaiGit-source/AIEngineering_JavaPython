@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "nutriopt-custom": {
+      "command": "java",
+      "args": [
+        "--enable-native-access=ALL-UNNAMED",
+        "-jar",
+        "C:/Users/saito/source/repos/AIEngineering_JavaPython/SpringMCPProject/NutriOpt/MCPServer/MCPServer/target/MCPServer-0.0.1-SNAPSHOT.jar"
+      ]
+    }
+  }
+}

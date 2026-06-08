@@ -34,3 +34,8 @@ spring.ai.mcp.server.stdio=true
 spring.main.banner-mode=off
 logging.level.root=OFF
 spring.ai.mcp.server.stdio=true
+
+
+# OpenFoodFacts API config
+nutriopt.openfoodfacts.base-url=https://world.openfoodfacts.org
+nutriopt.openfoodfacts.user-agent=NutriOpt/1.0 (Java Spring MCP Server; contact: sgopina7@my.centennialcollege.ca)

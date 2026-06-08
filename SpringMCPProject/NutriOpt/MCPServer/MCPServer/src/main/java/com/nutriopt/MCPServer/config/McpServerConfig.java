@@ -2,6 +2,7 @@ package com.nutriopt.MCPServer.config;
 
 import com.nutriopt.MCPServer.tools.FoodStorageTool;
 import com.nutriopt.MCPServer.tools.LpOptimizerTool;
+import com.nutriopt.MCPServer.tools.OpenFoodFactsTool;
 import com.nutriopt.MCPServer.tools.OpenPricesTool;
 import com.nutriopt.MCPServer.tools.PingTool;
 import org.springframework.ai.tool.ToolCallbackProvider;
@@ -16,6 +17,7 @@ public class McpServerConfig {
     public ToolCallbackProvider toolCallbackProvider(
             PingTool pingTool,
             OpenPricesTool openPricesTool,
+            OpenFoodFactsTool openFoodFactsTool,
             FoodStorageTool foodStorageTool,
             LpOptimizerTool lpOptimizerTool
     ) {
@@ -23,6 +25,7 @@ public class McpServerConfig {
                 .toolObjects(
                         pingTool,
                         openPricesTool,
+                        openFoodFactsTool,
                         foodStorageTool,
                         lpOptimizerTool
                 )

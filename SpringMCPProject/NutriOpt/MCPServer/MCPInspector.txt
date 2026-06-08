@@ -1,0 +1,1 @@
+npx @modelcontextprotocol/inspector java --enable-native-access=ALL-UNNAMED -jar target/MCPServer-0.0.1-SNAPSHOT.jar
