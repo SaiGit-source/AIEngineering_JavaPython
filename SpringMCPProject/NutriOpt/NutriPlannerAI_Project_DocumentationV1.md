@@ -537,7 +537,7 @@ flowchart TD
     B --> C[ChatPane.jsx]
     C --> D[useDieticianChat.js]
     D --> E[dieticianApi.js]
-    E --> F[/api/chat on MCPClient]
+    E --> F["/api/chat on MCPClient"]
     F --> G[AI response text]
     G --> H[ChatMessage.jsx]
     G --> I[parseMealPlan.js]
