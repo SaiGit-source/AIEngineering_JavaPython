@@ -1,0 +1,58 @@
+/.metadata/
+
+# Environment and secrets
+.env
+.env.*
+*.local
+*.env
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+.aws/
+secrets.*
+*.secret
+*.token
+
+# Local runtime and editor files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
+*.sqlite3
+*.db
+
+# Python / RAG ingestion
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Java / Spring Boot
+target/
+build/
+out/
+.gradle/
+*.class
+*.jar
+*.war
+*.ear
+
+# Node / React / Vite
+node_modules/
+dist/
+coverage/
+.vite/
+
+# AWS / Lambda / packaging
+lambda_build/
+*.zip
+*.tar.gz
+*.whl
